@@ -158,7 +158,7 @@ if file_up is not None:
     with st.spinner('Processing...'):
         time.sleep(5)
     # print out the top prediction label with score
-    if labels[0][1] < 60:
+    if labels[0][1] < 70:
         st.markdown("<div style='color: blue; font-size: 40px;'> I am not sure what this object is! </div>", unsafe_allow_html=True)
         st.markdown("<div style='color: red; font-size: 20px;'> I am not smart enough... *cries in corner* </div>", unsafe_allow_html=True)
         st.image('media/crying.gif')

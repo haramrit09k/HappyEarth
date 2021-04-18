@@ -3,11 +3,14 @@ from PIL import Image
 from clf import predict2
 import time
 
+classes=['beer-bottle','book', 'can', 'cardboard', 'egg', 'flower', 'food-peels', 'fruit', 'jute', 'leaf', 'meat', 'newspaper', 'paper-plate', 'pizza-box', 'plant', 'plastic-bag', 'plastic-bottle', 'spoilt-food', 'steel-container', 'thermocol']
+
 st.set_option('deprecation.showfileUploaderEncoding', False)
 
 st.title("Dont Trash Me")
-st.markdown("## Upload an image and I will tell you how you can reuse/recycle it (i.e. if it is recyclable :stuck_out_tongue:)\n\n\n<br></br>", unsafe_allow_html=True)
-
+st.markdown("## Upload an image and I will tell you how you can reuse/recycle it (i.e. if it is recyclable :stuck_out_tongue:)\n<br>", unsafe_allow_html=True)
+st.write("Currently only supports the following objects: \n")
+st.write(classes)
 file_up = st.file_uploader("Upload an image", type=["jpg", "png", "jpeg", "webp"])
 
 plastic_bottles = {
